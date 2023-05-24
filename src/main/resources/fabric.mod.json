@@ -1,34 +1,31 @@
 {
-	"schemaVersion": 1,
-	"id": "emi-server-recipes",
-	"version": "${version}",
-	"name": "emi-server-recipes",
-	"description": "This is an example description! Tell everyone what your mod is about!",
-	"authors": [
-		"Me!"
-	],
-	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
-	},
-	"license": "CC0-1.0",
-	"icon": "assets/emi-server-recipes/icon.png",
-	"environment": "*",
-	"entrypoints": {
-		"main": [
-			"io.github.nickacpt.emiserverrecipes.ExampleMod"
-		]
-	},
-	"mixins": [
-		"emi-server-recipes.mixins.json"
-	],
-	"depends": {
-		"fabricloader": ">=0.14.19",
-		"minecraft": "~1.19.4",
-		"java": ">=17",
-		"fabric-api": "*"
-	},
-	"suggests": {
-		"another-mod": "*"
-	}
+    "schemaVersion": 1,
+    "id": "emi-server-recipes",
+    "version": "${version}",
+    "name": "emi-server-recipes",
+    "description": "Mod that adds recipes received from the server into EMI",
+    "authors": [
+        "NickAcPT"
+    ],
+    "contact": {
+        "homepage": "https://github.com/NickAcPT/emi-server-recipes/",
+        "sources": "https://github.com/NickAcPT/emi-server-recipes"
+    },
+    "license": "MIT",
+    "icon": "assets/emi-server-recipes/icon.png",
+    "environment": "client",
+    "entrypoints": {
+        "emi": [
+            "io.github.nickacpt.emiserverrecipes.emi.EmiServerRecipesPlugin"
+        ]
+    },
+    "mixins": [
+        "emi-server-recipes.mixins.json"
+    ],
+    "depends": {
+        "fabricloader": ">=0.14.19",
+        "minecraft": "~1.19.4",
+        "java": ">=17",
+        "emi": "*"
+    }
 }
